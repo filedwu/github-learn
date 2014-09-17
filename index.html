@@ -52,6 +52,8 @@ $ git push -u origin master //将本地代码推送到服务器的master分支
 
 
 
+
+
 If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.
 
 ### Designer Templates
@@ -68,7 +70,17 @@ Having trouble with Pages? Check out the documentation at http://help.github.com
 </code></pre>
 
 <p>下面是例子</p>
-
+<p>我首先在我的github新建一个test的项目，最右边的导航里找到 shh地址 git@github.com:filedwu/test.git，记下这个地址</p>
+打开 git shell工具
+输入cd test 定位到test目录
+输入git pull 显示 已经是最新的版本
+输入git fetch 将远程分支信息获取到本地
+输入git checkout -b local-branche-name/remote-branch-name 可以将远程分支映射到本地名为local-branche-name的分支 此分支名可以自定义
+然后可以对本地分支 上的文件进行修改 修改之后
+输入git commit add index.html 将修改过的文件加入队列 * 可表示整个分支的内容 此行命令输入之后 会显示本地分支修改的部分
+输入git commit -m"修改信息" 对分支进行提交 提交之后才能push到服务器
+输入git push -u orgin local-branche-name //local-branche-name 为刚刚定义的本地分支名
+这样的话 本地文件就传到服务器上的相关分支了
         </article>
       </div>
     </div>
