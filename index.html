@@ -10,22 +10,17 @@
   <link rel="stylesheet" href="stylesheets/pygment_trac.css">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script type="text/javascript" src="javascripts/script.js"></script>
-
-  <title>Test</title>
-  <meta name="description" content="这是一个测试的项目">
-
+  <title>学习使用github进行分支开发</title>
+  <meta name="description" content="使用github的心得">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-
 </head>
-
 <body>
-
   <div class="wrapper">
     <header>
-      <h1 class="title">Test</h1>
+      <h1 class="title">学习使用github进行分支开发</h1>
     </header>
     <div id="container">
-      <p class="tagline">这是一个测试的项目33333 1015</p>
+      <p class="tagline">使用github的心得</p>
       <div id="main" role="main">
         <div class="download-bar">
         <div class="inner">
@@ -36,43 +31,55 @@
         <span class="blc"></span><span class="trc"></span>
         </div>
         <article class="markdown-body">
-          <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+          <p>最近一周研究了一下github这个开源的网站，发现github真是一个很强大的开发平台；自我感觉悟性太低，所以只有慢慢消化一下最近学习使用github的使用心得。</p>
+          <p>因为工作的原因，以前经常会接触github这个网站，但是自己一直没有去深入体验一下，最近花了两天时间研究了一下，搜集各种学习资料，然后自己操作了一遍，感觉使用起来确实很方便，无论是自己开发还是小团队合作开发似乎是一个不错的工具和平台。现在将这几天学习到的东西记录下来，怕日子就了忘记了，可以翻出来review</p>
+          <h3>准备工作</h3>
+          <p>1、进入github.com，下载客户端，根据自己的系统下载github客户端，有windows版和mac版，我使用的是windows版</p>
+          <p>2、首先注册github帐号，使用邮箱注册就ok了</p>
+          <p>3、新建一个repository中文翻译，这个词的意思是仓库，个人觉得翻译为"代码库"比较合适</p>
+          <p>4、建设好代码库之后，直接点击set to desktop 可以将库中代码下载到本地</p>
+          <p>4、在本地目录可以自己设置，我选择默认的目录</p>
 
-<p>记录一下shell操作命令，好记忆敌不过烂笔头</p>
-  <pre>
-    <code>
-    $ cd your_repo_root/repo_name   //定位到项目（repository）目录下
-    $ git fetch origin //把服务器上的代码checkout 下来
-    $ git checkout gh-pages  //绑定本地分支和服务器分支
-    $ git add filename //添加到队列 或者使用通配符*
-    $ git commit -m"info" //提交代码
-    $ git push -u origin master //将本地代码推送到服务器的master分支
-    </code>
-  </pre>
-<p>下面是例子</p>
-<p>我首先在我的github新建一个test的项目，最右边的导航里找到 shh地址 git@github.com:filedwu/test.git，记下这个地址</p>
-<p>打开 git shell工具
-<p>输入cd test 定位到test目录
-<p>输入git pull 显示 已经是最新的版本
-<p>输入git fetch 将远程分支信息获取到本地
-<p>输入git checkout -b local-branche-name origin/gh-pages可以将远程分支映射到本地名为local-branche-name的分支 此分支名可以自定义
-<p>然后可以对本地分支 上的文件进行修改 修改之后
-<p>输入git commit add index.html 将修改过的文件加入队列 * 可表示整个分支的内容 此行命令输入之后 会显示本地分支修改的部分
-<p>输入git commit -m"修改信息" 对分支进行提交 提交之后才能push到服务器
-<p>输入git push -u orgin local-branche-name //local-branche-name 为刚刚定义的本地分支名
-<p>这样的话 本地文件就传到服务器上的相关分支了
-<p>新建一个moca的 repository  点击 set up in desktop</p> 的按钮，会在本地C:\Users\weiweiwu\Documents\GitHub下创建一个moca的文件夹
-<p>打开git shell 输入cd moca 进入到项目目录
-<h3>git 分支操作</h3>
-<p>git branch -a //查看远程分支
-<p>git branch   //查看本地分支
-<p>git branch branch-name  //创建分支
-<p>git branch -d local-branch-name //删除本地分支
-<p>git checkout -b local-branche-name origin/gh-pages  //远程分支映射到本地
+          <h3>如何生成git page</h3>
+          <p>选择要生成的页面的 repository，点击页面右侧的Settings</p>
+          <p>按照要求输入 相应的内容之后 找到 Automatic page generator 这个按钮 点击</p>
+          <p>进入到如下页面，配置好页面信息以及页面内容，默认的内容都是可以修改掉的，修改完成之后点击 最下方的 continue to layouts 的按钮</p>
+          <p>进入到选择模版的页面，在页面最上方选择你喜欢的页面模版，下方是你的页面的预览图，选择ok之后 点击publish page是就可以发布页面了</p>
+          <p>第一次发布需要等待十分钟之后才能看到发布的页面的效果，以后更新会即时同步</p>
+          <p>如何查看页面，还是点击settings 找到git-page 可以看到如下信息就可找到页面的链接地址</p>
 
-
-        </article>
+          <h3>如何使用git shell对代码进行一些必要操作</h3>
+          <p>首先在github新建一个test的项目，最右边的导航里找到 shh地址 git@github.com:filedwu/test.git，记下这个地址</p>
+          <p>打开 git shell工具
+          <p>输入cd test 定位到test目录
+          <p>输入git pull 显示 已经是最新的版本
+          <p>输入git fetch 将远程分支信息获取到本地
+          <p>输入git checkout -b local-branche-name origin/gh-pages可以将远程分支映射到本地名为local-branche-name的分支 此分支名可以自定义
+          <p>然后可以对本地分支 上的文件进行修改 修改之后
+          <p>输入git commit add index.html 将修改过的文件加入队列 * 可表示整个分支的内容 此行命令输入之后 会显示本地分支修改的部分
+          <p>输入git commit -m"修改信息" 对分支进行提交 提交之后才能push到服务器
+          <p>输入git push -u orgin local-branche-name //local-branche-name 为刚刚定义的本地分支名
+          <p>这样的话 本地文件就传到服务器上的相关分支了
+          <p>新建一个moca的 repository  点击 set up in desktop</p> 的按钮，会在本地C:\Users\weiweiwu\Documents\GitHub下创建一个moca的文件夹
+          <p>打开git shell 输入cd moca 进入到项目目录
+          <h3>git 分支操作</h3>
+          <p>git branch -a //查看远程分支
+          <p>git branch   //查看本地分支
+          <p>git branch branch-name  //创建分支
+          <p>git branch -d local-branch-name //删除本地分支
+          <p>git checkout -b local-branche-name origin/gh-pages  //远程分支映射到本地
+          <p>
+            <pre>
+              <code>
+              $ cd your_repo_root/repo_name   //定位到项目（repository）目录下
+              $ git fetch origin //把服务器上的代码checkout 下来
+              $ git checkout gh-pages  //绑定本地分支和服务器分支
+              $ git add filename //添加到队列 或者使用通配符*
+              $ git commit -m"info" //提交代码
+              $ git push -u origin master //将本地代码推送到服务器的master分支
+              </code>
+            </pre>
+          </p>        </article>
       </div>
     </div>
     <footer>
