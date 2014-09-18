@@ -5,11 +5,8 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
   <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
   <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript" src="javascripts/script.js"></script>
   <title>学习使用github进行分支开发</title>
   <meta name="description" content="使用github的心得">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -80,17 +77,16 @@
           <p>输入git push -u orgin local-branche-name //local-branche-name 为刚刚定义的本地分支名</p>
           <p>这样的话 本地文件就传到服务器上的相关分支了</p>
           <p><img src="images/step/gitsheel04.jpg" alt=""></p>
-
           <h3>git 分支操作汇总</h3>
-          <p>git branch -a //查看远程分支</p>
+          <p>git branch -a //查看全部分支</p>
+          <p>git branch -r //查看远程分支</p>
           <p>git branch   //查看本地分支</p>
           <p>git branch branch-name  //创建分支</p>
           <p>git checkout branch-name //切换分支</p>
           <p>git branch -d local-branch-name //删除本地分支</p>
           <p>git push origin :mybranch //删除远程分支</p>
           <p>git checkout -b local-branche-name origin/gh-pages  //远程分支映射到本地</p>
-          <p>
-            <pre>
+          <pre>
               <code>
               $ cd your_repo_root/repo_name   //定位到项目（repository）目录下
               $ git fetch origin //把服务器上的代码checkout 下来
@@ -100,13 +96,12 @@
               $ git push -u origin master //将本地代码推送到服务器的master分支
               </code>
             </pre>
-          </p>        </article>
+          </article>
       </div>
     </div>
     <footer>
       <div class="owner">
       <p><a href="https://github.com/filedwu" class="avatar"><img src="https://avatars2.githubusercontent.com/u/7733862?v=2&amp;s=60" width="48" height="48"></a> <a href="https://github.com/filedwu">filedwu</a> maintains <a href="https://github.com/filedwu/test">Test</a></p>
-
       </div>
       <div class="creds">
         <small>This page generated using <a href="http://pages.github.com/">GitHub Pages</a><br>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
@@ -118,5 +113,7 @@
     <a href="https://github.com/filedwu/test/tarball/master" class="tar">tar</a><a href="https://github.com/filedwu/test/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
     <p class="name"></p>
   </div>
+  <script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
 </body>
 </html>
